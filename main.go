@@ -6,8 +6,8 @@ import (
 )
 
 func main() {
-	m := make(map[string]int)
-	rm := make(map[string]int)
+	symbolMap := make(map[string]int)
+	reapetSymbolMap := make(map[string]int)
 	fmt.Println("Please enter symbols")
 	var enteredSymbols string
 	_, err := fmt.Scanf("%s", &enteredSymbols)
@@ -16,16 +16,16 @@ func main() {
 	}
 	symbolsRune := []rune(enteredSymbols)
 	for _, r := range symbolsRune {
-		m[strconv.QuoteRune(r)]++
+		symbolMap[strconv.QuoteRune(r)]++
 	}
-	for s, rp := range m {
+	for s, rp := range symbolMap {
 		if rp > 1 {
-			rm[s] = rp
+			reapetSymbolMap[s] = rp
 		}
 	}
-	if len(rm) == 0 {
-		fmt.Println("The string symbols are uniq")
+	if len(reapetSymbolMap) == 0 {
+		fmt.Println("The string symbols are uniq!")
 	} else {
-		fmt.Println(rm)
+		fmt.Println(reapetSymbolMap)
 	}
 }
