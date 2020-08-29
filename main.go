@@ -26,8 +26,8 @@ func main() {
 	if len(reapetSymbolMap) == 0 {
 		fmt.Println("The string symbols are uniq!")
 	} else {
-		for k,v := range reapetSymbolMap{
-		fmt.Printf("Symbol %s reapiting %d times\n",k,v)
+		for k, v := range reapetSymbolMap {
+			fmt.Printf("Symbol %s reapiting %d times\n", k, v)
 		}
 	}
 }
